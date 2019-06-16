@@ -1,0 +1,154 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compartible" content="ie=edge">
+    <title>
+        Confo.com
+    </title>
+    <link rel="icon" type="image/ico" href="img/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/splash.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <div class="splash">
+        <div class="logo">
+            <img src="img/second.png">
+            <p>evolving. conference. solutions</p>
+        </div>
+        <div class="down">
+            <img src="img/down-vector.png" id="dwn">
+        </div>
+    </div>
+    <div id="main" style="visibility:hidden">
+        <div class="container" id="container"  >  
+            <div class="container-navigation" id="container-navigation">
+                <div class="image-navigation">
+                    <img src="img/second.png">
+                </div>
+                <nav class="list-navigation">
+                    <ol>
+                        <li><a href=".container">Home</a></li>
+                        <li><a href="container-about">About</a></li>
+                        <li><a href="container-event">Events</a></li>
+                        <li><a href="signup.html">Sign-up</a></li>
+                        <span class="login">
+                            <li><a href="login.html">Log-in</a></li>
+                        </span>
+                    </ol>
+                </nav>
+                
+            </div>
+            <div class="writings">
+                <p>Taking Your Conference</p>
+                <p>Meetings</p>
+                <p><span>To You</span></p>
+            </div>
+            <div class="line1"></div>
+            <div class="team">
+                <p id="member">TEAM MEMBERS</p>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="container-about">
+            <p>We are members of Group 7; Codename: Project Team Alpha. <br><br><br>We work endlessly to give you the perfect conference management system </p> 
+        </div>
+        <div class="container-event">
+            <div class="suggestions">
+                <p>We Offer</p>
+                <ol>
+                    <li>Notification of up-coming conferences</li>
+                    <li>Sending messages to friends and colleagues</li>
+                    <li>Sharing of Conference files and documents</li>
+                    <li>Assigning chairs and posts</li>
+                </ol>
+            </div>
+            <div class="pictures">
+                <div>
+                    <img src="img/marketing.png"> 
+                    <img src="img/orkshop.png">
+                    <img src="img/seminar.png">
+                </div>
+                <div>
+                    <img src="img/seminars.png">
+                    <img src="img/banquet.png">
+                    <img src="img/boardmeeting.png">
+                </div>
+            </div>
+        </div>
+        <footer><div class="information">
+            <div class="stay-connected">
+                <h1>Stay-Connected</h1>
+                <p>Join people to get quality</p>
+                <p>conferences happening close</p>
+                <p>to you</p>
+                <input type="text" placeholder="Email" width="265px" style="background-color:#edede4; border-radius:5px; height:36px; font-size:24px">
+            </div>
+            <div class="find-us">
+                <h1>Find Us</h1>
+                <p>University of Lagos, Akoka,</p>
+                <p>Yaba, Lagos,</p>
+                <p>Nigeria.</p>
+                <p>Postcode:102342</p>
+            </div>
+            <div class="send-message">
+                <h1>Send A Message</h1>
+                <p>Email:support@alpha.com</p>
+                <p>Tel:08143496579</p>
+                <p>Github:github.com/</p>
+                <p>amaechichisom/team-alpha</p>
+            </div>
+            </div>
+            <center>
+                <p id="copy">&copy 2019 Team-Alpha</p>
+            </center>
+        </footer>
+    </div>
+    
+    
+
+    
+    
+    
+    
+    <script>
+        $('#dwn').on('click', () => {
+            $('.splash').slideUp("slow",function(){
+                $('#main').fadeIn(2000).css({visibility:"visible"});
+            })
+        })
+    </script>
+    <script>
+        window.onscroll = function(){myFunction()};
+
+        var header = document.getElementById("container-navigation");
+
+        var sticky = header.offsetTop;
+
+        function myFunction(){
+            if (window.pageYOffset > sticky){
+
+                header.classList.add("sticky");
+            }
+            else{
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+    <script>
+        memberElement=document.getElementById("member");
+        var team = ["Amaechi", "Oladugba", "Adewusi", "Babatunde", "James", "Team Members"];
+        var i = 0;
+
+        setInterval(() => {
+            memberElement.innerText = team[i];
+            i++;
+            if (i > 5) i = 0;
+        }, 3000);
+    </script>
+</body>
+
+</html>
